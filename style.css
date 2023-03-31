@@ -1,0 +1,133 @@
+/*reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Generic*/
+html {
+    background-color: #120945;
+    color: white;
+    font-family: Livvic, sans-serif;
+}
+
+.container {
+    max-width: 370px;
+    margin: 12px auto;
+}
+header {
+    z-index: 1;
+    height: 240px;
+    border-radius: 0 0 20px 20px;
+    background-color: #3535ec;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 70px;
+    background-image: url(header-bg.png);
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 32px;
+}
+
+.Calendar {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.box {
+    margin: 5px;
+    border-radius: 12px;
+    width: 80px;
+    height: 80px;
+    background-color: #306753;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box:last-child {
+    width: calc(100% - 12px);
+    background-color: #d4d7f5;
+    color: #306753;
+}
+.box-icon {
+    width: 20px;
+    height: 20px;
+}
+.box-date {
+    font-size: 40px;
+    font-weight: 600;
+
+}
+
+.box-opened {
+    opacity: 0.2;
+}
+
+/*Modale*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(12, 11, 74, 0.5);
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.modal-window {
+    background-color: #de7eb6;
+    min-width: 320px;
+    min-height: 320px;
+    border-radius: 20px;
+    padding:32px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+.modal-content {
+    margin: 12px;
+}
+
+.modal-content * {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.modal-button {
+    border: 0;
+    padding: 12px;
+    font-size: 20px;
+    background-color: #3535ec;
+    color: white;
+
+}
+
+.modal-hidden {
+    visibility: hidden;
+}
+.modal-hidden .modal-window {
+    transform: scale(0);
+}
